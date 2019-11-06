@@ -8,3 +8,6 @@
 # book files
 */_book/
 src/_book/*
+
+# template
+src/_template/*

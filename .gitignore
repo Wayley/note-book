@@ -1,0 +1,10 @@
+# editor files
+*/.vscode/
+.vscode/*
+
+*/.idea/
+.idea/*
+
+# book files
+*/_book/
+src/_book/*

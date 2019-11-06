@@ -1,7 +1,7 @@
 {
   "name": "note-book",
   "version": "0.0.1",
-  "description": "'the note collection of everything i interested in\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D m\u001b[2~ \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[2~\u001b[3~\u001b[3~\u001b[3~interested in during my studying and working'",
+  "description": "'the note collection of everything i interested in during my studying and working'",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -7,10 +7,10 @@
 
 ### Contents
 
-<a name="git">
+<a name="git" id="git">
 
 #### Git 的使用
 
-<a name="svn">
+<a name="svn" id="svn">
 
 #### SVN 的使用

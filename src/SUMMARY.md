@@ -10,6 +10,11 @@
 
 - [PHP](php/README.md)
 
+  - [PHP 基础教程](php/PHPTutorial.md)
+
+  - [Laravel](php/Laravel/README.md)
+    - [Laravel 基础](php/Laravel/LaravelTutorial.md)
+
 - [Bash](bash/README.md)
 
 - [Linux](linux/README.md)

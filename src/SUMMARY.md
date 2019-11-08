@@ -29,3 +29,7 @@
   - [Gitbook 的使用](other-notes/gitbook-notes/README.md)
 
   - [版本控制系统的使用](other-notes/version-control/README.md)
+
+  - [各种快捷键](other-notes/shortcuts/README.md)
+
+    - [chrome 快捷键](other-notes/shortcuts/ShortcutsInChrome.md)

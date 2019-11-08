@@ -2,7 +2,9 @@
 
 ## Table of Contents
 
-1. [File Management](#FM)
+1. [Common Used Commands](#common_used)
+
+2. [File Management](#FM)
 
    1. [cat](#cat)
    2. [chattr](#chattr)
@@ -10,9 +12,27 @@
    4. [mv](#mv)
    5. [rm](#rm)
 
-2. [Document Editing](#DE)
+3. [Document Editing](#DE)
 
 ## Contents
+
+<a name="common_used" id="common_used">
+
+### Common Used Commands
+
+| 命令                                        | 其他形式                                                   | 说明                                                      |
+| ------------------------------------------- | :--------------------------------------------------------- | --------------------------------------------------------- |
+| mkdir myFolder                              |                                                            | 创建 myFolder 的文件夹                                    |
+| rm -r myFolder                              | -f                                                         | 删除 myFolder 文件夹                                      |
+| touch myFile.txt                            | -f 强制                                                    | 创建 myFile.txt 的文件                                    |
+| rm myFile.txt                               |                                                            | 删除 myFile.txt 文件                                      |
+| vi myFile.txt                               |                                                            | 新建一个文件并进入编辑状态,如果文件存在则直接进入编辑状态 |
+| vi 是 linux 下的文本编辑器程序，有两种模式; | vi myFile.txt 会默认进入命令模式，按:+命令会执行相关操作； |                                                           |
+| i (命令模式===>编辑模式)                    | esc (编辑模式===>命令模式)                                 |                                                           |
+| 命令模式下                                  | :q                                                         | 退出编辑，若文本内容被修改过，则会报错                    |
+|                                             | :q!                                                        | 强制退出编辑，若文本内容被修改过，会丢弃此次的修改        |
+|                                             | :x                                                         | 退出编辑并保存                                            |
+|                                             | dd                                                         | 删除当前行                                                |
 
 <a name="FM" id="FM">
 

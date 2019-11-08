@@ -12,6 +12,10 @@
 
 - [Bash](bash/README.md)
 
+- [DataBase](database/README.md)
+
+  - [MySQL](database/mysql/README.md)
+
 - [其他笔记简介](other-notes/README.md)
 
   - [Gitbook 的使用](other-notes/gitbook-notes/README.md)

@@ -10,6 +10,8 @@
 
 - [PHP](php/README.md)
 
+- [Bash](bash/README.md)
+
 - [其他笔记简介](other-notes/README.md)
 
   - [Gitbook 的使用](other-notes/gitbook-notes/README.md)

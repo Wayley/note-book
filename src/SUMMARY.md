@@ -16,6 +16,8 @@
 
   - [Commands in Linux](linux/CommandsInLinux.md)
 
+  - [Commands in Windows](linux/CommandsInWindows.md)
+
 - [DataBase](database/README.md)
 
   - [MySQL](database/mysql/README.md)

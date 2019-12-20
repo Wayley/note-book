@@ -24,7 +24,7 @@ $ ssh-keygen -t rsa -C hb_wangzheng@163.com -f ~/.ssh/wz-rsa
 | git add xx 命令可以将 xx 文件添加到暂存区，如果有很多改动可以通过 git add -A. <font size=1>[(备注)](#remark1)</font>来一次添加所有改变的文件。 |                      |                                |
 | git push origin dev                                                                                                                            |                      |          创建远程分支          |
 | git branch -b dev_wz origin/dev                                                                                                                |                      | 创建与远程关联的本地分支并切换 |
-| git branch -r -d origin/dev <br/> git push origin dev                                                                                          |                      |      删除远程的 dev 分支       |
+| git push origin --delete dev                                                                                                                   |                      |      删除远程的 dev 分支       |
 | git remote prune origin                                                                                                                        |                      |  删除远程仓库不存在的本地分支  |
 | git remote -v                                                                                                                                  | git remote --verbose |          查看远程仓库          |
 | git remote add [shortname][url]                                                                                                                |                      |          添加远程仓库          |
@@ -36,7 +36,7 @@ $ ssh-keygen -t rsa -C hb_wangzheng@163.com -f ~/.ssh/wz-rsa
 
 > 注意
 
-1. -A 选项后面还有一个句点。
+1. -A. 选项后面还有一个句点。
 2. git add -A 表示添加所有内容，
 3. git add . 表示添加新文件和编辑过的文件不包括删除的文件;
 4. git add -u 表示添加编辑或者删除的文件，不包括新添加的文件

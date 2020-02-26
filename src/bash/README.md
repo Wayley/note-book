@@ -94,3 +94,11 @@ $ git push -u origin --all
 
 $ git push -u origin --tags
 ```
+
+## Git SSH
+
+> 解决 The authenticity of host '192.168.xxx.xxx (192.168.xxx.xxx)' can't be established.的问题
+
+```bash
+$ ssh  -o StrictHostKeyChecking=no  192.168.xxx.xxx　
+```

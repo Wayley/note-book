@@ -8,6 +8,8 @@
 
 - [前端笔记](front-end/README.md)
 
+  - [Next Plan](front-end/NextPlan.md)
+
 - [PHP](php/README.md)
 
   - [PHP 基础教程](php/PHPTutorial.md)

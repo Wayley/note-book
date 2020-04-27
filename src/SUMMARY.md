@@ -40,3 +40,5 @@
   - [各种快捷键](other-notes/shortcuts/README.md)
 
     - [chrome 快捷键](other-notes/shortcuts/ShortcutsInChrome.md)
+
+  - [git 的使用](other-notes/git-notes/README.md)

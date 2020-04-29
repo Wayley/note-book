@@ -7,4 +7,5 @@ module.exports = {
       { rel: 'shortcut icon', href: 'favicon.ico', type: 'image/x-icon' },
     ],
   ],
+  port: 9966, // dev server端口
 };

@@ -18,9 +18,11 @@
     "mobi": "styles/website.css",
     "epub": "styles/website.css"
   },
+  "plugins": ["expandable-chapters"],
   "links": {
     "sidebar": {
-      "Github": "https://github.com/Wayley"
+      "Github": "https://github.com/Wayley",
+      "Home": "/"
     }
   }
 }

@@ -6,6 +6,7 @@
 .idea/*
 
 # book files
+_book
 */_book/
 src/_book/*
 

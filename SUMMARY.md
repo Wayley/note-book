@@ -9,3 +9,4 @@
   - [CSS](src/pages/front-end/css/README.md)
     - [清除默认样式](src/pages/front-end/css/normalize.md)
 - [PHP](src/pages/php/README.md)
+- [Shell](src/pages/shell/README.md)

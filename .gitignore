@@ -11,3 +11,7 @@ src/_book/*
 
 # template
 src/_template/*
+
+# node_modules
+node_modules
+src/node_modules

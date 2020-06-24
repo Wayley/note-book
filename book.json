@@ -12,11 +12,11 @@
     }
   },
   "styles": {
-    "website": "src/styles/website.css",
+    "website": "styles/website.css",
     "ebook": "styles/website.css",
-    "pdf": "src/styles/website.css",
-    "mobi": "src/styles/website.css",
-    "epub": "src/styles/website.css"
+    "pdf": "styles/website.css",
+    "mobi": "styles/website.css",
+    "epub": "styles/website.css"
   },
   "plugins": ["expandable-chapters-small"],
   "links": {

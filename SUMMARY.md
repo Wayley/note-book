@@ -22,4 +22,6 @@
     * [linux 下的命令](linux/commands_in_linux.md)
 * [Shell](shell/README.md)
     * [Git](shell/git.md)
+* [其他笔记](other-notes/README.md)
+    * [快捷键](other-notes/shortcut.md)
 

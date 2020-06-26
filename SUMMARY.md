@@ -11,5 +11,9 @@
 - [PHP](php/README.md)
 - [数据库](database/README.md)
   - [MySQL](database/mysql.md)
+- linux
+  - [脚本解释器](linux/script_interpreter.md)
+  - [window 下的命令](linux/commands_in_windows.md)
+  - [linux 下的命令](linux/commands_in_linux.md)
 - [Shell](shell/README.md)
   - [Git](shell/git.md)

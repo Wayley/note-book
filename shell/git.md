@@ -1,6 +1,14 @@
 # Git
 
+1. [Git-Bash 使用](#git_bash)
+2. [Commands For Git](#git_command)
+3. [Gitlab 命令行指引](#gitlab_command)
+4. [Git SSH](#git_ssh)
+5. [Git 常见问题](#git_faq)
+
 ## Git-Bash 使用
+
+<a name="git_bash" id="git_bash">
 
 - 安装 git-bash
 - git bash here 工具 生成公、密钥
@@ -19,6 +27,8 @@
 - 同步 tortoiseGit 的 SSH(<font color=red> setting -> Network -> SSH (choose ~/Git\usr\bin\ssh.exe) </font> )
 
 ## Commands For Git
+
+<a name="git_command" id="git_command">
 
 | 命 令                                                                                                                                          |       其他形式       |              说明              |
 | :--------------------------------------------------------------------------------------------------------------------------------------------- | :------------------: | :----------------------------: |
@@ -45,11 +55,12 @@
 
 ## Gitlab 命令行指引
 
+<a name="gitlab_command" id="gitlab_command">
+
 - git 全局配置
 
 ```shell
 $ git config --global user.name 'wz'
-
 $ git config --global user.email 'hb_wangzheng@163.com'
 ```
 
@@ -57,13 +68,9 @@ $ git config --global user.email 'hb_wangzheng@163.com'
 
 ```shell
 $ git init
-
 $ git add README.md
-
 $ git commit -m 'your remarks of this commit, such as `add README file` or `first init commit` '
-
 $ git remote add origin git@github.com:xxx/xx.git
-
 $ git push -u origin master
 ```
 
@@ -71,15 +78,10 @@ $ git push -u origin master
 
 ```shell
 $ cd existed_folder
-
 $ git init
-
 $ git remote add origin git@github.com:xxx/xx.git
-
 $ git add .
-
 $ git commit -m 'your remarks of this commit, such as `add README file` or `first init commit` '
-
 $ git push -u origin master
 ```
 
@@ -87,20 +89,84 @@ $ git push -u origin master
 
 ```shell
 $ cd existed_folder
-
 $ git remote rename <old-remote-name> <new-remote-name>
-
 $ git remote add origin git@github.com:xxx/xx.git
-
 $ git push -u origin --all
-
 $ git push -u origin --tags
 ```
 
 ## Git SSH
+
+<a name="git_ssh" id="git_ssh">
 
 > 解决 The authenticity of host '192.168.xxx.xxx (192.168.xxx.xxx)' can't be established.的问题
 
 ```shell
 $ ssh  -o StrictHostKeyChecking=no  192.168.xxx.xxx　
 ```
+
+## Git 常见问题
+
+<a name="git_faq" id="git_faq">
+
+### 1.github 用户主页不显示 contributions 记录的问题
+
+|  方法  |                 形式                 |                  说明                  |
+| :----: | :----------------------------------: | :------------------------------------: |
+| 方法 1 |  将当前 git 的 email 添加到 GitHub   |    [详细说明](#add_email_to_github)    |
+| 方法 2 | 修改提交记录中的邮箱为已被关联的邮箱 | [详细说明](#correlate_email_to_github) |
+
+#### 将当前 git 的 email 添加到 GitHub
+
+<a name="add_email_to_github" id="add_email_to_github">
+
+```bash
+# 获取当前的user信息
+$ git config user.name
+$ git config user.email
+```
+
+#### 修改提交记录中的邮箱为已被关联的邮箱
+
+<a name="correlate_email_to_github" id="correlate_email_to_github">
+
+- clone 需要修改 commit 记录的 repo, 并进入目录
+
+  ```bash
+  $ git clone --bare git@github.com:xxXUser/xxxRepo.git && cd xxxRepo.git
+  ```
+
+- 将以下内容的脚本文件(script.sh)添加到 xxxRepo.git 目录下
+
+  ```bash
+  #!/bin/sh
+  git filter-branch --env-filter
+  OLD_EMAIL="OLD_EMAIL" # 旧的Email
+  CORRECT_NAME="CORRECT_NAME" # 新的用户名
+  CORRECT_EMAIL="CORRECT_EMAIL"# 新的Email
+  if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+  then
+      export GIT_COMMITTER_NAME="$CORRECT_NAME"
+      export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+  fi
+  if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+  then
+      export GIT_AUTHOR_NAME="$CORRECT_NAME"
+      export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+  fi
+  ' --tag-name-filter cat -- --branches --tags'
+
+  ```
+
+- 执行上面 script.sh 文件
+
+  > window 下找到 sh.exe(一般在 git 的安装目录下的 bin 目录，eg:C:\Program Files\Git\bin)
+
+  ```bash
+  $ ./script.sh
+  ```
+
+- 把正确的提交历史 push 到 GitHub 上
+  ```bash
+  $ git push --force --tags origin 'refs/heads/*'
+  ```

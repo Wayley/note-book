@@ -10,6 +10,7 @@
   - [NextPlan](front-end/next_plan.md)
 - [PHP](php/README.md)
   - [php 基础](php/tutorial.md)
+  - [Laravel](php/laravel.md)
 - [数据库](database/README.md)
   - [MySQL](database/mysql.md)
 - [linux](linux/README.md)

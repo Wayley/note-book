@@ -9,9 +9,10 @@
     - [清除默认样式](front-end/css/normalize.md)
   - [NextPlan](front-end/next_plan.md)
 - [PHP](php/README.md)
+  - [php 基础](php/tutorial.md)
 - [数据库](database/README.md)
   - [MySQL](database/mysql.md)
-- linux
+- [linux](linux/README.md)
   - [脚本解释器](linux/script_interpreter.md)
   - [window 下的命令](linux/commands_in_windows.md)
   - [linux 下的命令](linux/commands_in_linux.md)

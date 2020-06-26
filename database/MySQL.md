@@ -12,3 +12,5 @@
 | 给指定的 wedding 数据库添加名为 wz 密码为 123123 的用户 | `mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON wedding.* TO 'wz'@'localhost' IDENTIFIED BY '123123'` |  -   |
 | 进入 wedding 数据库                                     |                                             `mysql> use wedding;`                                              |  -   |
 | 在进入 wedding 数据库下列出所有的表                     |                                              `mysql> SHOW TABLES`                                              |  -   |
+
+## 连接

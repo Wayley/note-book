@@ -3,14 +3,6 @@
   "description": "Notes in Development by Robben Wayley",
   "author": "wzheng(hb_wangzheng@163.com)",
   "language": "zh-hans",
-  "pluginsConfig": {
-    "theme-default": {
-      "showLevel": false
-    },
-    "github": {
-      "url": "https://github.com/Wayley"
-    }
-  },
   "styles": {
     "website": "styles/website.css",
     "ebook": "styles/website.css",
@@ -18,7 +10,34 @@
     "mobi": "styles/website.css",
     "epub": "styles/website.css"
   },
-  "plugins": ["expandable-chapters-small"],
+  "plugins": [
+    "theme-comscore",
+    "expandable-chapters-small",
+    "code",
+    "copy-code-button",
+    "splitter",
+    "tbfed-pagefooter",
+    "hide-element",
+    "back-to-top-button",
+    "pageview-count",
+    "popup"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": false
+    },
+    "github": {
+      "url": "https://github.com/Wayley"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy Wayley.com 2020",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    }
+  },
   "links": {
     "sidebar": {
       "Github": "https://github.com/Wayley",

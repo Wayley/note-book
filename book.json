@@ -13,7 +13,6 @@
   "plugins": [
     "theme-comscore",
     "expandable-chapters-small",
-    "code",
     "copy-code-button",
     "splitter",
     "tbfed-pagefooter",

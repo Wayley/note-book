@@ -17,6 +17,7 @@
     * [网站生成器](front-end/site-generator/README.md)
         * [Gitbook](front-end/site-generator/gitbook.md)
         * [Vuepress](front-end/site-generator/vuepress.md)
+    * [前端规范](front-end/code_specification.md)
     * [NextPlan](front-end/next_plan.md)
 * [PHP](php/README.md)
     * [php 基础](php/tutorial.md)

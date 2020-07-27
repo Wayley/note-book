@@ -44,7 +44,7 @@
 | git remote rm [remotename]                                                                                                                     |                      |          删除远程仓库          |
 | git remote origin set-url [url]                                                                                                                |                      |        修改远程仓库地址        |
 
-<a name="remark1">
+<a name="remark1" id="remark1">
 
 > 注意
 

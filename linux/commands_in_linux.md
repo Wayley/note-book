@@ -38,19 +38,19 @@
 
 ### File Management
 
-<a name="cat">
+<a name="cat" id="cat">
 
 #### cat
 
-<a name="chattr">
+<a name="chattr" id="chattr">
 
 #### chattr
 
-<a name="chgrp">
+<a name="chgrp" id="chgrp">
 
 #### chgrp
 
-<a name="mv">
+<a name="mv" id="mv">
 
 #### mv
 
@@ -118,7 +118,7 @@ $ mv /home/logs/a.txt /home/info
 $ mv /home/logs/a.txt /home/info/b.txt
 ```
 
-<a name="rm">
+<a name="rm" id="rm">
 
 #### rm
 

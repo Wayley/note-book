@@ -10,7 +10,7 @@
 
 ### Module
 
-<a name="module">
+<a name="module" id="module">
 
 ```js
 angular.module("xx.chapter", []).directive("xxChapter", [

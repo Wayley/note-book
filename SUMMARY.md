@@ -10,6 +10,7 @@
         * [BFC](front-end/css/bfc.md)
         * [IFC](front-end/css/ifc.md)
         * [FFC](front-end/css/ffc.md)
+        * [CSS3 特效](front-end/css/effect_in_css3.md)
     * [Angular](front-end/angular/README.md)
         * [AngularJS](front-end/angular/angular_js.md)
         * [Angular](front-end/angular/angular.md)

@@ -229,3 +229,83 @@ letters.forEach((letter, i) => {
   revealText.append(span);
 });
 ```
+
+### 文字背景动态渐出
+
+```html
+<div class="wrapper">
+  <h1 class="slide-bar title">I'm alphardex.</h1>
+  <p class="slide-bar subtitle">A CSS Wizard</p>
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: #222;
+  flex-direction: column;
+}
+.slide-bar {
+  position: relative;
+  color: transparent;
+  animation: fill-text-white 2s 1.6s forwards;
+  line-height: 30px;
+  width: 240px;
+  height: 30px;
+}
+.slide-bar::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: slide-in-out 2s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+@keyframes slide-in-out {
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes fill-text-white {
+  to {
+    color: #fff;
+  }
+}
+.title {
+  margin: 0;
+  font-family: Lora, serif;
+  font-size: 32px;
+}
+.title::before {
+  background: #ff4081;
+}
+.subtitle {
+  margin-top: 10px;
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  animation-delay: 3.2s;
+}
+.subtitle::before {
+  background: #03a9f4;
+  animation-delay: 2s;
+}
+```

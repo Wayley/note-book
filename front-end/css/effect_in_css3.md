@@ -91,6 +91,61 @@
 
 ## 文字动态渐入
 
+### 从左渐入
+
+```html
+<p class="landIn">land in from the left slide</p>
+```
+
+```css
+p {
+  margin: 0 9em;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.landIn {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.8;
+  color: white;
+  font-family: Lora, serif;
+  white-space: pre;
+}
+
+.landIn span {
+  animation: landIn 0.8s ease-out both;
+}
+
+@keyframes landIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+```js
+let landInTexts = document.querySelectorAll(".landIn");
+landInTexts.forEach((landInText) => {
+  let letters = landInText.textContent.split("");
+  landInText.textContent = "";
+  letters.forEach((letter, i) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.style.animationDelay = `${i * 0.05}s`;
+    landInText.append(span);
+  });
+});
+```
+
+### 从中间渐入
+
 ```html
 <div class="reveal">sword art online</div>
 ```

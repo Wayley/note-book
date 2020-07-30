@@ -41,3 +41,45 @@ $ mkdir console-cli && cd console-cli && npm init
 
 console.log("This is a console cli tool");
 ```
+
+## 使用 CLI
+
+### 全局使用
+
+#### 本地全局使用
+
+> 在上面的项目根目录下执行`npm link`就会在本地全局环境中添加工具名称`console-cli`
+
+```bash
+$ npm link
+```
+
+> 在任意目录下执行`console-cli`,控制台就会打印`This is a console cli tool`
+
+```bash
+$ console-cli
+# output: This is a console cli tool
+```
+
+#### npm 安装后全局使用
+
+> 发布到`npm`后就可以使用`npm install -g console-cli`,然后就可以全局使用了
+
+### 在项目中使用
+
+> 为项目写一个 cli 工具,例如:
+
+- 项目名称为`car-demo`
+- `console-cli`工具在项目根目录下的`src/cli/console-cli/`下
+
+```bash
+# 在项目根目录下
+# -D(--save-dev)  or  -S(--save)
+$ npm i -D file:file:src/cli/console-cli/
+# or
+$ yarn add -D file:src/cli/console-cli/
+```
+
+则在`package.json`中的`devDependencies`(取决于`-D`还是`-S`)上新增`"console-cli": "file:src/cli/console-cli/",`
+
+同时在`package.json`中的`scripts`上新增自己的脚本命令`"custom":"console-cli"`

@@ -8,6 +8,7 @@
     * [Node.js](front-end/nodejs/README.md)
         * [定制自己的 CLI](front-end/nodejs/cli_development.md)
         * [colors.js 的使用](front-end/nodejs/usage_of_colors.md)
+        * [single-line-log 的使用](front-end/nodejs/single_line_log.md)
     * [CSS](front-end/css/README.md)
         * [清除默认样式](front-end/css/normalize.md)
         * [BFC](front-end/css/bfc.md)

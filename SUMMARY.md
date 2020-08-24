@@ -40,6 +40,8 @@
     * [linux 下的命令](linux/commands_in_linux.md)
 * [Shell](shell/README.md)
     * [Git](shell/git.md)
+* [编辑器](editor/README.md)
+    * [vscode](editor/vscode.md)
 * [其他笔记](other-notes/README.md)
     * [快捷键](other-notes/shortcut.md)
 

@@ -6,6 +6,7 @@
     * [JavaScript](front-end/javascript/README.md)
         * [JS 与 APP 通讯](front-end/javascript/js_app_call.md)
     * [Node.js](front-end/nodejs/README.md)
+        * [npm](front-end/nodejs/npm.md)
         * [定制自己的 CLI](front-end/nodejs/cli_development.md)
         * [colors.js 的使用](front-end/nodejs/usage_of_colors.md)
         * [single-line-log 的使用](front-end/nodejs/single_line_log.md)

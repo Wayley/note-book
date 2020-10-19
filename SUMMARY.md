@@ -5,6 +5,7 @@
 * [前端](front-end/README.md)
     * [JavaScript](front-end/javascript/README.md)
         * [JS 与 APP 通讯](front-end/javascript/js_app_call.md)
+        * [原生JS文件上传进度](front-end/javascript/file_progress.md)
     * [Node.js](front-end/nodejs/README.md)
         * [npm](front-end/nodejs/npm.md)
         * [定制自己的 CLI](front-end/nodejs/cli_development.md)

@@ -19,6 +19,7 @@
         * [CSS3 特效](front-end/css/effect_in_css3.md)
         * [常见的 CSS 写法](front-end/css/common_writing_in_css.md)
     * [React](front-end/React/README.md)
+    * [Vue](front-end/Vue/README.md)
     * [Angular](front-end/angular/README.md)
         * [AngularJS](front-end/angular/angular_js.md)
         * [Angular](front-end/angular/angular.md)

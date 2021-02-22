@@ -1,6 +1,6 @@
 # algorithm
 
-## Table Of Contents
+## Table of Contents
 
 1. [斐波拉契](#fibonacci)
 2. [记忆函数](#memoize_fn)

@@ -8,6 +8,7 @@
         * [原生 JS 文件上传进度](front-end/javascript/file_progress.md)
         * [JS 常用的工具函数](front-end/javascript/utils.md)
     * [Node.js](front-end/nodejs/README.md)
+        * [package.json 解读](front-end/nodejs/package_json.md)
         * [npm](front-end/nodejs/npm.md)
         * [定制自己的 CLI](front-end/nodejs/cli_development.md)
         * [colors.js 的使用](front-end/nodejs/usage_of_colors.md)

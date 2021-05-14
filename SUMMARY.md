@@ -37,6 +37,7 @@
         * [OpenStreetMap](front-end/maps/openstreetmap.md)
         * [Leaflet](front-end/maps/leafletjs.md)
     * [前端规范](front-end/code_specification.md)
+    * [语义化版本规范](front-end/semantic_versioning.md)
     * [前端项目优化](front-end/project_optimization.md)
     * [PostMessage](front-end/post_message.md)
     * [NextPlan](front-end/next_plan.md)

@@ -4,7 +4,7 @@
  * @Company: Fih-ACKN
  * @Date: 2021-05-14 10:04:38
  * @LastEditors: wzheng(hb_wangzheng@163.com)
- * @LastEditTime: 2021-06-28 18:27:58
+ * @LastEditTime: 2021-06-28 18:35:06
  * @Description:
 -->
 
@@ -25,10 +25,36 @@
 ### Introduction
 
 - 工程初始化
+
   - `npm init`
   - 设置`private`为`true`
   - 新增`README.md`
   - `git init`和新增`.gitignore`
+
+    ```
+    .DS_Store
+    node_modules
+    */node_modules
+
+    # local env files
+    .env.local
+    .env.*.local
+
+    # Log files
+    npm-debug.log*
+    yarn-debug.log*
+    yarn-error.log*
+
+    # Editor directories and files
+    .idea
+    .vscode
+    *.suo
+    *.ntvs*
+    *.njsproj
+    *.sln
+    *.sw*
+    ```
+
 - 初识`nodejs`
 
   ```js
@@ -46,11 +72,30 @@
   ```
 
 - 创建脚本工具目录`src/bin`
-- 使用`link`
+- 使用`npm link`
 
 <a name="getting_started" id="getting_started">
 
 ### Getting Started
+
+#### 指定脚本解析器/引擎版本
+
+- 向`package.json`中添加`engines`属性
+
+  ```json
+  // package.json
+  {
+    "engines": {
+      "node": "^10.12.0 || ^12.0.0 || >= 14.0.0"
+    }
+  }
+  ```
+
+- check node version
+
+```js
+const expectedVersion = require("../../package.json").engines;
+```
 
 <a name="building_package" id="building_package">
 

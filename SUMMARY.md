@@ -11,6 +11,7 @@
         * [package.json 解读](front-end/nodejs/package_json.md)
         * [npm](front-end/nodejs/npm.md)
         * [定制自己的 CLI](front-end/nodejs/cli_development.md)
+        * [CLI 开发案例](front-end/nodejs/cli_development_case.md)
         * [colors.js 的使用](front-end/nodejs/usage_of_colors.md)
         * [single-line-log 的使用](front-end/nodejs/single_line_log.md)
     * [CSS](front-end/css/README.md)

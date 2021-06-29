@@ -76,6 +76,19 @@
 
 - Create Action
 
+  - async create action
+  - validate app name
+  - check target dir exists or not
+  - Creator
+  - Creator-create
+  - framework
+  - copy template
+  - update `package.json`
+  - add `README.md`
+  - install dependencies
+  - git init
+  - finish
+
 <a name="building_package" id="building_package">
 
 ### Building Package

@@ -158,3 +158,22 @@
   "typescript.preferences.quoteStyle": "single"
 }
 ```
+
+## Plugins
+
+### Table of Contents
+
+1. [vscode-drawio](#vscode_drawio)
+1. [code-flowchart](#code_flowchart)
+
+### Contents
+
+<a name="vscode_drawio" id="vscode_drawio">
+
+#### vscode-drawio
+
+> 可以直接在`VS Code`上面画图
+
+<a name="code_flowchart" id="code_flowchart">
+
+#### code-flowchart

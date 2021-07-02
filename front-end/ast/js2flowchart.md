@@ -59,3 +59,9 @@
   ```js
   document.getElementById("svgImage").innerHTML = svg;
   ```
+
+## Command Usage
+
+```shell
+$ js2flowchart ./main.js
+```

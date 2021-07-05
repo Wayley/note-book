@@ -30,6 +30,7 @@
         * [AngularJS](front-end/angular/angular_js.md)
         * [Angular](front-end/angular/angular.md)
     * [TypeScript](front-end/typescript/README.md)
+        * [TS 指南](front-end/typescript/handbook.md)
     * [模块打包器](front-end/module_bundler/README.md)
         * [Webpack](front-end/module_bundler/webpack.md)
         * [Rollup](front-end/module_bundler/rollup.md)

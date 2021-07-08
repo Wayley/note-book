@@ -4,6 +4,7 @@
 
 1. [数据类型](#types)
 2. [类型断言](#type_assertion)
+3. [接口](#interface)
 
 ## Contents
 
@@ -141,4 +142,75 @@ console.log(obj[sym]); // "value"
 ```ts
 const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
 const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
+```
+
+<a name="interface" id="interface">
+
+### 接口
+
+#### 普通的类型检查
+
+> 如下例：类型检测器会查看`printFullName`的调用。`printFullName`函数有一个参数`person`,并要求参数`person`对象具有两个属性:名为`firstName`类型为`string`和名为`lastName`类型为`string`的两个属性。`printFullName`函数没有返回值。传入的参数实际上会有其他额外的属性(如`age`),但是编译器只会检查那些比需的属性是否存在并且类型是否匹配。
+
+```ts
+function printFullName(person: { firstName: string; lastName: string }): void {
+  const { lastName, firstName } = person;
+  console.log(`Hello, my name is ${firstName}· ${lastName}`);
+}
+let user = { firstName: "Robben", lastName: "Wong", age: 13 };
+printFullName(user);
+```
+
+#### 使用 interface
+
+```ts
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+function printFullName(person: Person): void {
+  const { lastName, firstName } = person;
+  console.log(`Helloo, my name is ${firstName}· ${lastName}`);
+}
+let user = { firstName: "Robben", lastName: "Wong", age: 13 };
+printFullName(user);
+```
+
+#### 可选属性
+
+> `属性名?:type`
+
+```ts
+interface Person {
+  firstName: string;
+  lastName: string;
+  age?: number;
+}
+function printFullName(person: Person): void {
+  const { lastName, firstName, age } = person;
+  console.log(`Helloo, my name is ${firstName}· ${lastName}.`);
+  if (age || age == 0) console.log(`And i am ${age} years old.`);
+}
+let user = { firstName: "Robben", lastName: "Wong", age: 19 };
+printFullName(user);
+```
+
+#### 只读属性
+
+> 属性名前用 readonly 来指定只读属性。`readonly 属性名:type`
+
+```ts
+interface Person {
+  firstName: string;
+  lastName: string;
+  age?: number;
+  readonly IDCardNumber: number | string;
+}
+let personA: Person = {
+  firstName: "Robben",
+  lastName: "Wong",
+  IDCardNumber: "420323X",
+};
+// personA.IDCardNumber = '420323x';// An error occurred
+console.log(personA);
 ```

@@ -214,3 +214,7 @@ let personA: Person = {
 // personA.IDCardNumber = '420323x';// An error occurred
 console.log(personA);
 ```
+
+### 类
+
+> 类(class)

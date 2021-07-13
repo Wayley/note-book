@@ -5,6 +5,7 @@
 1. [数据类型](#types)
 2. [类型断言](#type_assertion)
 3. [接口](#interface)
+4. [类](#class)
 
 ## Contents
 
@@ -215,6 +216,10 @@ let personA: Person = {
 console.log(personA);
 ```
 
+<a name="class" id="class">
+
 ### 类
 
 > 类(class)
+
+#### 继承

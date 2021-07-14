@@ -6,6 +6,7 @@
 2. [类型断言](#type_assertion)
 3. [接口](#interface)
 4. [类](#class)
+5. [泛型](#generic_object_types)
 
 ## Contents
 
@@ -223,3 +224,7 @@ console.log(personA);
 > 类(class)
 
 #### 继承
+
+<a name="generic_object_types" id="generic_object_types">
+
+### 泛型

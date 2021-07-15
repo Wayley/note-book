@@ -219,6 +219,48 @@ console.log(personA);
 
 <a name="class" id="class">
 
+#### 额外属性检查
+
+> 对象字面量赋值给变量或者作为参数传递的时候，会被进行特殊对待并进行额外属性检查。
+
+```ts
+interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+
+function createSquare(config: SquareConfig): { color: string; area: number } {
+  // ...
+}
+
+let mySquare = createSquare({ colour: "red", width: 100 }); // 额外的colour属性会导致报错
+```
+
+- 使用类型断言
+
+  ```ts
+  interface SquareConfig {
+    color?: string;
+    width?: number;
+  }
+
+  function createSquare(config: SquareConfig): { color: string; area: number } {
+    // some code
+  }
+
+  let mySquare = createSquare({ colour: "red", width: 100 } as SquareConfig);
+  ```
+
+- 添加字符串索引签名
+
+  ```ts
+  interface SquareConfig {
+    color?: string;
+    width?: number;
+    [propName: string]: any;
+  }
+  ```
+
 ### 类
 
 > 类(class)

@@ -336,6 +336,16 @@ interface NumberDictionary {
 }
 ```
 
+可以使用`readonly`关键字将索引签名设置为只读，防止给索引赋值。
+
+```ts
+interface ReadonlyStringArray {
+  readonly [index: number]: string;
+}
+let myArray: ReadonlyStringArray = ["Chinese", "English"];
+myArray[1] = "Japanese"; // error! Error: 类型“ReadonlyStringArray”中的索引签名仅允许读取。
+```
+
 ### 类
 
 > 类(class)

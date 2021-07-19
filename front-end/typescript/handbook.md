@@ -346,6 +346,131 @@ let myArray: ReadonlyStringArray = ["Chinese", "English"];
 myArray[1] = "Japanese"; // error! Error: 类型“ReadonlyStringArray”中的索引签名仅允许读取。
 ```
 
+#### 类类型
+
+##### 实现接口
+
+TypeScript 也能够用接口来明确的强制一个类去符合某种契约，或者说让类是实现接口。
+
+```ts
+interface ClockInterface {
+  currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+  currentTime: Date;
+  constructor(h: number, m: number) {}
+}
+```
+
+也可以在接口中描述一个方法(如下面的`setTime`方法)，在类里实现它。
+
+```ts
+interface ClockInterface {
+  currentTime: Date;
+  setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+  currentTime: Date;
+  setTime(d: Date) {
+    this.currentTime = d;
+  }
+  constructor(h: number, m: number) {}
+}
+```
+
+接口描述了类的公共部分，而不是公共和私有两部分。它不会帮你检查类是否具有某些私有成员。
+
+##### 类静态部分和实例部分的区别
+
+当一个类实现了一个接口的时候，只对其实例部分进行类型检查。constructor 存在于类的静态部分，所以不在检查的范围内。
+
+因此，我们应该直接操作类的静态部分。
+
+#### 接口继承
+
+接口也可以相互继承,一个接口(`Square`)也可以继承多个接口(`Shape`和`PenStroke`)
+
+```ts
+interface Shape {
+  color: string;
+}
+interface PenStroke {
+  penWidth: number;
+}
+interface Square extends Shape, PenStroke {
+  sideWidth: number;
+}
+
+let square = <Square>{};
+square = {
+  color: "red",
+  sideWidth: 6,
+  penWidth: 5.0,
+};
+```
+
+#### 混合类型
+
+有时候我们希望一个对象可以同时具有多种类型。
+
+```ts
+interface Counter {
+  (start: number): string;
+  interval: number;
+  reset(): void;
+}
+
+function getCounter(): Counter {
+  let counter = <Counter>function (start: number) {
+    console.log(`Your counter is started at : ${start}`);
+  };
+  counter.interval = 10;
+  counter.reset = function () {
+    console.log(`You have reset`);
+  };
+  return counter;
+}
+
+let c = getCounter();
+console.log(c); // func
+c(11); // Your counter is started at : 11
+console.log(c.interval); // 10
+c.interval = 5.0;
+console.log(c.interval); // 5.0
+c.reset(); // You have reset
+```
+
+上面的 TS 等价于下面的 JS
+
+```ts
+function getCounter() {
+  let counter = function (start) {
+    console.log(`Your counter is started at : ${start}`);
+  };
+  counter.interval = 10;
+  counter.reset = function () {
+    console.log(`You have reset`);
+  };
+  return counter;
+}
+let c = getCounter();
+
+console.log(c); // func
+c(11); // Your counter is started at : 11
+console.log(c.interval); // 10
+c.interval = 5.0;
+console.log(c.interval); // 5.0
+c.reset(); // You have reset
+```
+
+#### 接口继承类
+
+接口可以继承一个类类型。当接口继承一个类类型时，它会继承类的成员，但不包括其实现。
+
+当接口继承了一个拥有`private`或`protected`成员的类时，那这个接口类型只能被这个类或者子类所实现。
+
 ### 类
 
 > 类(class)

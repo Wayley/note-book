@@ -64,6 +64,8 @@
 * [编辑器](editor/README.md)
     * [vscode](editor/vscode.md)
 * [Tableau](tableau/README.md)
+* [ThingsBoard](thingsboard/README.md)
+    * [规则引擎](thingsboard/rule-engine.md)
 * [其他笔记](other-notes/README.md)
     * [快捷键](other-notes/shortcut.md)
 

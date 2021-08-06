@@ -164,7 +164,7 @@
 ### Table of Contents
 
 1. [vscode-drawio](#vscode_drawio)
-1. [code-flowchart](#code_flowchart)
+2. [code-flowchart](#code_flowchart)
 
 ### Contents
 

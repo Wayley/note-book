@@ -25,6 +25,7 @@
         * [js2flowchart](front-end/ast/js2flowchart.md)
         * [react-flow-renderer](front-end/ast/react_flow_renderer.md)
     * [React](front-end/React/README.md)
+        * [React Weekly Learning](front-end/React/react-weekly-learning/README.md)
     * [Vue](front-end/Vue/README.md)
     * [Angular](front-end/angular/README.md)
         * [AngularJS](front-end/angular/angular_js.md)

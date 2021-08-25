@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^6.2.0",
     "wing-dotenv": "^0.0.5"
   }
 }

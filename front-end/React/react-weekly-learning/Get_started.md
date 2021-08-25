@@ -4,7 +4,7 @@
  * @Company: FOXCONN(-ACKN)
  * @Date: 2021-08-24 16:33:48
  * @LastEditors: wzheng(hb_wangzheng@163.com)
- * @LastEditTime: 2021-08-25 13:54:27
+ * @LastEditTime: 2021-08-25 15:10:46
  * @Description:
 -->
 
@@ -14,22 +14,24 @@
 
 ## 初始化
 
+使用 create-react-app 创建 app
+
 开始之前请先安装`node`或`yarn`,如果想使用`npx`,则要求安装的 npm 版本 5.2 以上
 
-```bash
+```shell
 $ yarn create react-app xx-app
 # or
 $ npx create-react-app xx-app
 
 ```
 
-```bash
+```shell
 $ cd xx-app && yarn start
 ```
 
-## 添加打包构建配置
+## 环境配置
 
-在 start(即`development`模式)、test(即`test`模式)、build(即`production`模式)等下，指定不同的环境变量配置。
+在 start(即`development`模式)、test(即`test`模式)、build(即`production`模式)等不同 mode 下，指定不同的环境变量配置或文件。
 
 - react-scripts
 
@@ -220,3 +222,69 @@ $ cd xx-app && yarn start
     <span style="color: red;">(Notice: .env.local is missing)</span>
 </tr>
 </table>
+
+## 使用 craco
+
+CRACO(Create React App Configuration Override)
+
+使用 [craco](https://github.com/gsoft-inc/craco) 来重写 create-react-app 的配置
+
+- install
+
+  ```shell
+  $ yarn add @craco/craco -D
+  #or
+  $ npm install @craco/craco --save-dev
+  ```
+
+- add craco configs
+
+  在项目根目录下添加以下任意一种文件配置, 如果存在多个文件,那么 craco 只会取一种文件,优先级如下:
+
+  1. ` craco.config.js`
+  2. `.cracorc.js`
+  3. `.cracorc`
+
+- update script
+
+  ```json
+  /* package.json */
+  "scripts": {
+    -   "start": "react-scripts start",
+    +   "start": "craco start",
+    -   "build": "react-scripts build",
+    +   "build": "craco build",
+    -   "test": "react-scripts test",
+    +   "test": "craco test",
+  }
+
+  ```
+
+<b>Tips:</b> Setting a Custom Location for `craco.config.js`
+
+Both options support a `relative` or an `absolute` path
+
+1. package.json (Recommended)
+
+You can change the location of the craco.config.js file by specifying a value for `cracoConfig` in your package.json file.
+
+```json
+/* package.json */
+
+{
+  "cracoConfig": "config/craco-config-with-custom-name.js"
+}
+```
+
+2. CLI (For backward compatibility)
+
+You can also change the location of the craco.config.js file by specifying the`--config` CLI option. This option doesn't support Babel with Jest
+
+```json
+/* package.json */
+{
+  "scripts": {
+    "start": "craco start --config config/craco-config-with-custom-name.js"
+  }
+}
+```

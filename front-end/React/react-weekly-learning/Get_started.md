@@ -4,7 +4,7 @@
  * @Company: FOXCONN(-ACKN)
  * @Date: 2021-08-24 16:33:48
  * @LastEditors: wzheng(hb_wangzheng@163.com)
- * @LastEditTime: 2021-08-25 11:27:47
+ * @LastEditTime: 2021-08-25 13:54:27
  * @Description:
 -->
 
@@ -107,7 +107,7 @@ $ cd xx-app && yarn start
 </tr>
 <!-- react-scripts -->
 <tr>
-  <td rowspan="3">react-scripts</td>
+  <td rowspan="3"><b>react-scripts</b></td>
   <td>yarn start</td>
   <td>react-scripts start</td>
   <td>development</td>
@@ -115,7 +115,7 @@ $ cd xx-app && yarn start
     .env.development.local<br>
     .env.local<br>
     .env.development<br>
-    .en<br>
+    .env<br>
   </td>
 </tr>
 <tr>
@@ -139,9 +139,12 @@ $ cd xx-app && yarn start
     .env<br>
     <span style="color: red;">(Notice: .env.local is missing)</span>
 </tr>
+<tr>
+  <td></td>
+</tr>
 <!-- wing-dotenv -->
 <tr>
-  <td rowspan="7">wing-dotenv</td>
+  <td rowspan="7"><b>wing-dotenv</b></td>
   <td>yarn start</td>
   <td>react-scripts start</td>
   <td rowspan="2">development</td>

@@ -1,6 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+/*
+ * @Author: wzheng(hb_wangzheng@163.com)
+ * @Github: https://github.com/wayley
+ * @Company: FOXCONN(-ACKN)
+ * @Date: 2021-08-24 17:09:53
+ * @LastEditors: wzheng(hb_wangzheng@163.com)
+ * @LastEditTime: 2021-08-25 09:48:07
+ * @Description:
+ */
+import logo from "./logo.svg";
+import "./App.css";
+const envs = process.env;
+console.log(envs, "----");
 function App() {
   return (
     <div className="App">

@@ -12,12 +12,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:aliyun": "wing-dotenv -e .env.production.aliyun react-scripts build",
-    "build:aws": "wing-dotenv -e .env.production.aws react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "build:aliyun": "wing-dotenv -e .env.production.aliyun craco build",
+    "build:aws": "wing-dotenv -e .env.production.aws craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [

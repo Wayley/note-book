@@ -10,8 +10,9 @@
 
 ### 1.1 首屏加载时间优化
 
-> 拆分首屏项目代码和业务逻辑,只加载首屏应用代码
-> 使用 CDN 加载第三方库 而非使用 `npm install` 到本地
+- 拆分首屏项目代码和业务逻辑,只加载首屏应用代码
+
+- 使用 CDN 加载第三方库 而非使用 `npm install` 到本地
 
 ### 1.2 静态资源文件大小优化
 
@@ -19,7 +20,9 @@
 
   ```js
   //webpack.config.js
+
   const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
   module.exports = {
     optimization: {
       minimizer: [
@@ -53,6 +56,7 @@
   ```
 
 - 开启 Gzip
+
   ```js
       const compressionWebpackPlugin = require('compression-webpack-plugin')
       chainWebpack(config) {

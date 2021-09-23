@@ -204,6 +204,16 @@ const routes = [
 ];
 ```
 
+<b>Route fields</b>
+
+|       field        |             required              |      type       |                   remarks                   |
+| :----------------: | :-------------------------------: | :-------------: | :-----------------------------------------: |
+|       `path`       | <span style="color: red">T</span> |     String      |               同一级的要唯一                |
+|    `component`     |                 F                 | React Component | 当前路由下要显示的页面,如果没有则显示空白页 |
+|   `privateRoute`   |                 F                 |     Boolean     | 是否是私有路由(需登录/授权后才能访问的路由) |
+| `routeExtraProps`  |                 F                 |     Object      |       react-router-dom 文档中其他属性       |
+| `noNotFoundRender` |                 F                 |     Boolean     |     标识该路由不需要定义子集的 404 页面     |
+
 - RouteFactory
 
 ```js

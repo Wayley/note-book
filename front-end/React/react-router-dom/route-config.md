@@ -213,6 +213,7 @@ const routes = [
 |   `privateRoute`   |                 F                 |     Boolean     | 是否是私有路由(需登录/授权后才能访问的路由) |
 | `routeExtraProps`  |                 F                 |     Object      |       react-router-dom 文档中其他属性       |
 | `noNotFoundRender` |                 F                 |     Boolean     |     标识该路由不需要定义子集的 404 页面     |
+|      `routes`      |                 F                 |      Array      |              该路由下的子路由               |
 
 - RouteFactory
 

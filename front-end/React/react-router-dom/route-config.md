@@ -161,7 +161,6 @@ const routes = [
     routes: [
       {
         path: "/system",
-        component: EmptyWrapper,
         routes: [
           {
             path: "/system/account",
@@ -219,7 +218,7 @@ function RouteFactory(route) {
       key={path}
       {...props}
     >
-      <route.component />
+      {route.component && <route.component />}
       <Switch>
         {routes && routes.map((item) => RouteFactory(item))}
         {!noNotFoundRender && (

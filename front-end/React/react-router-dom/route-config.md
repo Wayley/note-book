@@ -61,60 +61,61 @@ export default function App() {
           </Switch>
         </Route>
         <PrivateRoute path="/">
-          <MainLayout />
-          <Switch>
-            <Route path="/system">
-              <Switch>
-                <Route path="/system/account">
-                  <Account />
-                  <Switch>
-                    <Route path="/system/account/add">
-                      <AccountAdd />
-                      <Switch>
-                        <Route path="/system/account/add/*">
-                          <NotFound />
-                        </Route>
-                      </Switch>
-                    </Route>
-                    <Route path="/system/account/:id" exact>
-                      <EditPage />
-                    </Route>
-                    <Route path="/system/account/detail/:id" exact>
-                      <DetailPage />
-                    </Route>
-                    <Route path="/system/account/*">
-                      <NotFound />
-                    </Route>
-                  </Switch>
-                </Route>
-                <Route path="/system/role">
-                  <Role />
-                  <Switch>
-                    <Route path="/system/role/*">
-                      <NotFound />
-                    </Route>
-                  </Switch>
-                </Route>
-                <Route path="/system/*">
-                  <NotFound />
-                </Route>
-              </Switch>
-            </Route>
-            <Route path="/device">
-              <Device />
-              <Switch>
-                <Route path="/device/*">
-                  <NotFound />
-                </Route>
-              </Switch>
-            </Route>
-            <Route path="/" exact>
-              <HomePage />
-            </Route>
-            <Route path="/*">
-              <NotFound />
-            </Route>
-          </Switch>
+          <MainLayout>
+            <Switch>
+              <Route path="/system">
+                <Switch>
+                  <Route path="/system/account">
+                    <Account />
+                    <Switch>
+                      <Route path="/system/account/add">
+                        <AccountAdd />
+                        <Switch>
+                          <Route path="/system/account/add/*">
+                            <NotFound />
+                          </Route>
+                        </Switch>
+                      </Route>
+                      <Route path="/system/account/:id" exact>
+                        <EditPage />
+                      </Route>
+                      <Route path="/system/account/detail/:id" exact>
+                        <DetailPage />
+                      </Route>
+                      <Route path="/system/account/*">
+                        <NotFound />
+                      </Route>
+                    </Switch>
+                  </Route>
+                  <Route path="/system/role">
+                    <Role />
+                    <Switch>
+                      <Route path="/system/role/*">
+                        <NotFound />
+                      </Route>
+                    </Switch>
+                  </Route>
+                  <Route path="/system/*">
+                    <NotFound />
+                  </Route>
+                </Switch>
+              </Route>
+              <Route path="/device">
+                <Device />
+                <Switch>
+                  <Route path="/device/*">
+                    <NotFound />
+                  </Route>
+                </Switch>
+              </Route>
+              <Route path="/" exact>
+                <HomePage />
+              </Route>
+              <Route path="/*">
+                <NotFound />
+              </Route>
+            </Switch>
+          <MainLayout/>
         </PrivateRoute>
       </Switch>
     </Router>
@@ -156,7 +157,7 @@ const routes = [
   },
   {
     path: "/",
-    component: MainLayout,
+    wrapper: MainLayout, // wrapper
     privateRoute: true,
     routes: [
       {
@@ -210,6 +211,7 @@ const routes = [
 | :----------------: | :-------------------------------: | :-------------: | :-----------------------------------------: |
 |       `path`       | <span style="color: red">T</span> |     String      |               同一级的要唯一                |
 |    `component`     |                 F                 | React Component | 当前路由下要显示的页面,如果没有则显示空白页 |
+|     `wrapper`      |                 F                 | React Component |          当前路由子路由的 wrapper           |
 |   `privateRoute`   |                 F                 |     Boolean     | 是否是私有路由(需登录/授权后才能访问的路由) |
 | `routeExtraProps`  |                 F                 |     Object      |       react-router-dom 文档中其他属性       |
 | `noNotFoundRender` |                 F                 |     Boolean     |     标识该路由不需要定义子集的 404 页面     |
@@ -222,6 +224,8 @@ function RouteFactory(route) {
   const { path, privateRoute, routeExtraProps, routes, noNotFoundRender } =
     route;
   let props = routeExtraProps ? { ...routeExtraProps } : {};
+  let Wrapper = ({ children }) =>
+    route.wrapper ? <route.wrapper>{children}</route.wrapper> : <>{children}</>;
   return (
     <AppRoute
       path={path}
@@ -230,14 +234,16 @@ function RouteFactory(route) {
       {...props}
     >
       {route.component && <route.component />}
-      <Switch>
-        {routes && routes.map((item) => RouteFactory(item))}
-        {!noNotFoundRender && (
-          <AppRoute path={route.path === "/" ? "/*" : `${route.path}/*`}>
-            <NotFound />
-          </AppRoute>
-        )}
-      </Switch>
+      <Wrapper>
+        <Switch>
+          {routes && routes.map((item) => RouteFactory(item))}
+          {!noNotFoundRender && (
+            <AppRoute path={route.path === "/" ? "/*" : `${route.path}/*`}>
+              <NotFound />
+            </AppRoute>
+          )}
+        </Switch>
+      </Wrapper>
     </AppRoute>
   );
 }

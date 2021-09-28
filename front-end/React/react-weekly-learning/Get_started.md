@@ -1,13 +1,3 @@
-<!--
- * @Author: wzheng(hb_wangzheng@163.com)
- * @Github: https://github.com/wayley
- * @Company: FOXCONN(-ACKN)
- * @Date: 2021-08-24 16:33:48
- * @LastEditors: wzheng(hb_wangzheng@163.com)
- * @LastEditTime: 2021-08-25 15:10:46
- * @Description:
--->
-
 # Getting Started
 
 本案例以`create-react-app`官方提供的 Cli 工具创建一个 react 应用
@@ -287,4 +277,34 @@ You can also change the location of the craco.config.js file by specifying the`-
     "start": "craco start --config config/craco-config-with-custom-name.js"
   }
 }
+```
+
+## 修改打包构建目录
+
+> 默认情况下, 运行`npm build`会生成`build`目录.
+
+### 修改构建目录为`dist`
+
+修改`craco.config.js`中的`webpack`配置
+
+- Step 01 指定`appBuild`为`dist`
+- Step 02 修改`output.path`为`dist`
+
+```js
+// craco.config.js
+const path = require("path");
+module.exports = {
+  webpack: {
+    configure: (config, { env, paths }) => {
+      paths.appBuild = "dist"; // step 1
+
+      config.output = {
+        ...config.output,
+        path: path.resolve(__dirname, "dist"), // step 2
+      };
+      return config;
+    },
+  },
+  // other configs
+};
 ```

@@ -6,69 +6,78 @@
 
 1. [安装 Gitbook](#install)
 2. [初始化书籍](#init)
-3. [预览书籍](#serve)
-4. [构建书籍](#build)
-5. [生成 PDF 格式的电子书](#pdf)
-6. [生成 epub 格式的电子书](#epub)
-7. [生成 mobi 格式的电子书](#mobi)
+3. [安装依赖](#install_dependencies)
+4. [预览书籍](#serve)
+5. [构建书籍](#build)
+6. [生成 PDF 格式的电子书](#pdf)
+7. [生成 epub 格式的电子书](#epub)
+8. [生成 mobi 格式的电子书](#mobi)
 
 ## Contents
 
-### 安装 Gitbook
+<div name="install" id="install"></div>
 
-<a name="install" id="install">
+### 安装 Gitbook
 
 ```bash
 $ npm install gitbook-cli -g
 ```
 
-### 初始化书籍
+<div name="init" id="init"></div>
 
-<a name="init" id="init">
+### 初始化书籍
 
 ```bash
 $ gitbook init
 ```
 
-### 预览书籍
+<div name="install_dependencies" id="install_dependencies"></div>
 
-<a name="serve" id="serve">
+### 安装依赖
+
+```bash
+$ gitbook install
+```
+
+<div name="serve" id="serve"></div>
+
+### 预览书籍
 
 ```bash
 $ gitbook serve [--port] [port]
 # 默认port 4000
 ```
 
-### 构建书籍
+<div name="build" id="build"></div>
 
-<a name="build" id="build">
+### 构建书籍
 
 ```bash
 $ gitbook build [bookpath] [output]
 # 默认output 是_book目录
 ```
 
-### 生成 PDF 格式的电子书
+<div name="pdf" id="pdf"></div>
 
-<a name="pdf" id="pdf">
+### 生成 PDF 格式的电子书
 
 ```bash
 $ gitbook pdf file-path
 # e.g  gitbook pdf ./el-book/bookname.pdf
 ```
 
-### 生成 epub 格式的电子书
+<div name="epub" id="epub"></div>
 
-<a name="epub" id="epub">
+### 生成 epub 格式的电子书
 
 ```bash
 $ gitbook epub file-path
 # e.g  gitbook epub ./el-book/bookname.epub
 ```
 
-### 生成 mobi 格式的电子书
+<div name="mobi" id="mobi"></div>
 
-<a name="mobi" id="mobi">
+### 生成 mobi 格式的电子书
 
 ```bash
 $ gitbook mobi file-path

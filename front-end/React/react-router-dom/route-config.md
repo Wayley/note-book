@@ -31,9 +31,10 @@ import {
 
 - App Component
 
-```js
+```jsx
 export default function App() {
-  <AuthProvider options={{ cookieKey: "app-auth-key" }}>
+  const options = { cookieKey: "app-auth-key" };
+  return <AuthProvider options={options}>
     <Router>
       <Switch>
         <Route path="/404">

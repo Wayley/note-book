@@ -1,6 +1,9 @@
-# vscode
+# VS Code
 
-## vscode 自定义配置
+## Custom Configuration
+
+<details>
+<summary><em>{..}</em> (Click to expand)</summary>
 
 ```json
 {
@@ -159,21 +162,25 @@
 }
 ```
 
+</details>
+
 ## Plugins
 
-### Table of Contents
+<!-- Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code -->
 
-1. [vscode-drawio](#vscode_drawio)
-2. [code-flowchart](#code_flowchart)
-
-### Contents
-
-<a name="vscode_drawio" id="vscode_drawio">
-
-#### vscode-drawio
-
-> 可以直接在`VS Code`上面画图
-
-<a name="code_flowchart" id="code_flowchart">
-
-#### code-flowchart
+|           插件名称           |                    插件功能                     | 说明 |
+| :--------------------------: | :---------------------------------------------: | :--: |
+|       Chinese Language       |                (简体)中文语言包                 |      |
+|        vscode-drawio         |           可以直接在`VS Code`上面画图           |      |
+|        code-flowchart        |                                                 |      |
+|      Code Spell Checker      |            检查单词拼写是否出现错误             |      |
+|            ESLint            |  语法规则和代码风格的检查工具，代码风格统一化   |      |
+|         file-header          |              自动生成头部注释插件               |      |
+|     Debugger for Chrome      |             vscode 中直接启动控制台             |      |
+|       HTML CSS Support       |             html 和 css 的语法检查              |      |
+|        HTML Snippets         |                  HTML 提示插件                  |      |
+| JavaScript(ES6)code snippets |               js 的提示(包括 ES6)               |      |
+|           prettier           | 与 ESLint 配合代码风格统一化,代码自动格式化工具 |      |
+|            Vuter             |                 vue 的代码提示                  |      |
+|          stylelint           |                 css 语法检查器                  |      |
+|    vscode-fileheader-git     |                                                 |      |

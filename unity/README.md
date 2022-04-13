@@ -4,6 +4,7 @@
 
 1. [Unity 认识](#unity_getting_started)
 2. [Unity 快捷键](#unity_shortcuts)
+3. [Unity 常用操作](#unity_notes)
 
 <a name="unity_getting_started" id="unity_getting_started"></a>
 
@@ -31,3 +32,7 @@
 |   缩放   |                        `滚动滚轮`                         |      |
 | 飞行模式 |                `鼠标右键` + `W/A/S/D/Q/E`                 |      |
 | 聚焦物件 |     Hierarchy 面板点击两下 <br>或<br> 选取物件后按 F      |      |
+
+<a name="unity_notes" id="unity_notes"></a>
+
+### Unity 常用操作

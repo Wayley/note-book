@@ -65,6 +65,7 @@
 * [版本控制器](version-control/README.md)
     * [SVN](version-control/subversion.md)
     * [Git](version-control/git.md)
+    * [Gerrit](version-control/gerrit.md)
 * [编辑器](editor/README.md)
     * [vscode](editor/vscode.md)
     * [Visual Studio](editor/visual_studio.md)

@@ -18,7 +18,9 @@ $ npx react-native init AwesomeTSProject --template react-native-template-typesc
 
 - 修改默认的8081端口。这样可以解决可能在Windows下运行报`Unable to load scripts...`的错误，同时也能解决`Fash Refresh`的问题；
 - 在unity project创建之前，最好更新unity.gitignore到`.gitignore`文件，不然会有unity大量新增变动来不及ignore
-- 在`MD Emulator`上可能还要在`android/app/build.gradle`中设置`def enableSeparateBuildPerCPUArchitecture = true`
+- 在`MD Emulator`上可能还要在`android/app/build.gradle`中设置：
+    - `def enableSeparateBuildPerCPUArchitecture = true`
+    - `project.ext.react`中包括`bundleInDebug: true`选项
 
 ### 初始化Unity Project并导出Android UnityLibary
 

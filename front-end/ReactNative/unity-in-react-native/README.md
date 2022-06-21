@@ -1,5 +1,7 @@
 # Unity + React Native
 
+## Get Started
+
 **1. Init RN App**
 
 ```shell
@@ -553,3 +555,60 @@ def isNewArchitectureEnabled() {
 ```
 
 </details>
+
+
+## 常见问题汇总
+
+### Q1: 应用上下bar问题
+1. unity上下bar隐藏掉
+2. unity中的`Main Camera`的Background设置为rgba(0, 0, 0, 0)
+3. C#中添加如下代码
+    <details>
+      <summary>C# Code</summary>
+
+      ```csharp
+      void Update()
+      {
+        Screen.SetResolution(1920, 720, false);
+        Screen.fullScreen = false;
+        // ...
+      }
+      ```
+    </details>
+    
+
+4. android项目中的`MainActivity.java`添加如下代码
+    <details>
+      <summary>Java Code</summary>
+
+      ```java
+      import android.view.WindowManager;
+      import android.os.Bundle;
+
+      public class MainActivity extends ReactActivity {   
+        // ...
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+          super.onCreate(savedInstanceState);
+          getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+          // getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        }
+      }
+      ```
+    </details>
+5. 可能需要设置UnityView的父级View位置样式
+    <details>
+      <summary>TSX Code</summary>
+
+      ```Typescript React
+      <View style={{ position:'absolute',top: 0, left: 0, right: 0, bottom: -85}}>
+        <UnityView
+          style={{ flex: 1 }}
+          // onMessage={onMessage}
+          // onUnityMessage={onUnityMessage}
+        />
+      </View>
+      ```
+    </details>
+  

@@ -43,6 +43,7 @@
 | git remote add origin git@github.com:xxx/xx.git                                                                                                |                      |        本地参考关联远程        |
 | git remote rm [remotename]                                                                                                                     |                      |          删除远程仓库          |
 | git remote origin set-url [url]                                                                                                                |                      |        修改远程仓库地址        |
+| git clean [options] |  git clean -Xdf 快速删除<br>git clean -Xdn只查看不删除|        操作gitignore文件中标记的文件        |
 
 <a name="remark1" id="remark1">
 

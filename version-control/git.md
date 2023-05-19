@@ -30,20 +30,21 @@
 
 ## Commands For Git
 
-| 命 令                                                                                                                                          |       其他形式       |              说明              |
-| :--------------------------------------------------------------------------------------------------------------------------------------------- | :------------------: | :----------------------------: |
-| git branch dev                                                                                                                                 |                      |          创建本地分支          |
-| git add xx 命令可以将 xx 文件添加到暂存区，如果有很多改动可以通过 git add -A. <font size=1>[(备注)](#remark1)</font>来一次添加所有改变的文件。 |                      |                                |
-| git push origin dev                                                                                                                            |                      |          创建远程分支          |
-| git branch -b dev_wz origin/dev                                                                                                                |                      | 创建与远程关联的本地分支并切换 |
-| git push origin --delete dev                                                                                                                   |                      |      删除远程的 dev 分支       |
-| git remote prune origin                                                                                                                        |                      |  删除远程仓库不存在的本地分支  |
-| git remote -v                                                                                                                                  | git remote --verbose |          查看远程仓库          |
-| git remote add [shortname][url]                                                                                                                |                      |          添加远程仓库          |
-| git remote add origin git@github.com:xxx/xx.git                                                                                                |                      |        本地参考关联远程        |
-| git remote rm [remotename]                                                                                                                     |                      |          删除远程仓库          |
-| git remote origin set-url [url]                                                                                                                |                      |        修改远程仓库地址        |
-| git clean [options] |  git clean -Xdf 快速删除<br>git clean -Xdn只查看不删除|        操作gitignore文件中标记的文件        |
+| 命 令                                                                                                                                          |                        其他形式                        |              说明               |
+| :--------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------: | :-----------------------------: | --- | -------------------------- |
+| git branch dev                                                                                                                                 |                                                        |          创建本地分支           |
+| git add xx 命令可以将 xx 文件添加到暂存区，如果有很多改动可以通过 git add -A. <font size=1>[(备注)](#remark1)</font>来一次添加所有改变的文件。 |                                                        |                                 |
+| git push origin dev                                                                                                                            |                                                        |          创建远程分支           |
+| git branch -b dev_wz origin/dev                                                                                                                |                                                        | 创建与远程关联的本地分支并切换  |
+| `git branch                                                                                                                                    |                    grep 'feature\*'                    |      xargs git branch -D `      |     | 批量删除本地`feature*`分支 |
+| git push origin --delete dev                                                                                                                   |                                                        |       删除远程的 dev 分支       |
+| git remote prune origin                                                                                                                        |                                                        |  删除远程仓库不存在的本地分支   |
+| git remote -v                                                                                                                                  |                  git remote --verbose                  |          查看远程仓库           |
+| git remote add [shortname][url]                                                                                                                |                                                        |          添加远程仓库           |
+| git remote add origin git@github.com:xxx/xx.git                                                                                                |                                                        |        本地参考关联远程         |
+| git remote rm [remotename]                                                                                                                     |                                                        |          删除远程仓库           |
+| git remote origin set-url [url]                                                                                                                |                                                        |        修改远程仓库地址         |
+| git clean [options]                                                                                                                            | git clean -Xdf 快速删除<br>git clean -Xdn 只查看不删除 | 操作 gitignore 文件中标记的文件 |
 
 <a name="remark1" id="remark1">
 

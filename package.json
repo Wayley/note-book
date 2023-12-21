@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Wayley/note-book/issues"
   },
-  "homepage": "https://github.com/Wayley/note-book#readme"
+  "homepage": "https://github.com/Wayley/note-book#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
